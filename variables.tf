@@ -1,23 +1,12 @@
-variable "name" {
+variable log_analytics_workspace_name {
+}
+
+# refer https://azure.microsoft.com/pricing/details/monitor/ for log analytics pricing 
+variable log_analytics_workspace_sku {
 }
 
 variable "location" {
   default = "uksouth"
-}
-
-variable "network_address_space" {
-}
-
-variable "aks_subnet_address_prefix" {
-}
-
-variable "aks_subnet_address_name" {
-}
-
-variable "appgw_subnet_address_prefix" {
-}
-
-variable "appgw_subnet_address_name" {
 }
 
 variable "environment" {
