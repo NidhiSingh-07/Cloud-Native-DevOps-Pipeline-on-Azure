@@ -1,3 +1,3 @@
-output "kubelet_object_id" {
-  value = azurerm_kubernetes_cluster.k8s.kubelet_identity[0].object_id
+output "resource_group_id" {
+  value = azurerm_resource_group.acr_resource_group.id
 }
