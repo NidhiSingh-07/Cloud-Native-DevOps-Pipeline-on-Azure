@@ -1,56 +1,13 @@
-# Example InSpec Profile For Azure
+# Testing infrastructure
 
-This example shows the implementation of an InSpec profile for Azure. See [https://github.com/inspec/inspec-azure](https://github.com/inspec/inspec-azure) for details on how to configure credentials for your subscription.
+The purpose of this lab is to look at how you can test your infrastructure. 
 
-##  Create a profile 
+In this lab, you will:
+- Use Inspec-Azure to test your Azure Resources
+- Run Inspec-Tests using Azure DevOps
 
-```
-$ inspec init profile --platform azure my-profile
+Please Note:- There is currently an issue regarding running Inspec-Azure - please see how to resolve here: https://github.com/inspec/inspec-azure/issues/592
 
- ─────────────────────────── InSpec Code Generator ───────────────────────────
+I have raised a PR to fix the issue: https://github.com/inspec/inspec-azure/pull/605 Once this has been merged, inspec testing will run successful again in Azure DevOps within this lab. 
 
-Creating new profile at /Users/spaterson/my-profile
- • Creating directory libraries
- • Creating file README.md
- • Creating directory controls
- • Creating file controls/example.rb
- • Creating file inspec.yml
- • Creating file libraries/.gitkeep
- 
-```
-
-## Run the tests
-
-```
-$ cd  my-profile/
-$ inspec exec . -t azure://
-
-
-Profile: Azure InSpec Profile (my-profile)
-Version: 0.1.0
-Target:  azure://12345abc-987d-654e-fg21-abcdef23324r
-
-  ×  azure-virtual-machines-exist-check: Check resource groups to see if any VMs exist. (4 failed)
-     ×  Azure Virtual Machines should exist
-     expected Azure Virtual Machines to exist
-     ×  Azure Virtual Machines should exist
-     expected Azure Virtual Machines to exist
-     ×  Azure Virtual Machines should exist
-     expected Azure Virtual Machines to exist
-     ×  Azure Virtual Machines should exist
-     expected Azure Virtual Machines to exist
-     ✔  Azure Virtual Machines should exist
-     ✔  Azure Virtual Machines should exist
-     ✔  Azure Virtual Machines should exist
-
-
-Profile: Azure Resource Pack (inspec-azure)
-Version: 1.2.0
-Target:  azure://12345abc-987d-654e-fg21-abcdef23324r
-
-     No tests executed.
-
-Profile Summary: 0 successful controls, 1 control failure, 0 controls skipped
-Test Summary: 3 successful, 4 failures, 0 skipped
-
-```
+temporary run the inspec tests locally.
