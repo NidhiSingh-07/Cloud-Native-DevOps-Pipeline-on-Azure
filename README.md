@@ -1,11 +1,7 @@
-# Deploy sample Application to AKS Cluster
+# Introducing CI/CD to your pipeline
 
-This lab is to deploy the sample Application to AKS cluster
-
-The purpose of this lab is to deploy the sample Application to AKS cluster. 
+The purpose of this lab is to introduce you to CI/CD. 
 
 In this lab, you will:
-- Update terraform with AKS ACR role assignment
-- Deploy Application Insights using terraform
-- Deploy Azure Key Vault using Terraform
-- Update Azure DevOps pipeline and Deploy sample application to AKS!
+- Begin CI/CD with Pipeline Trigger for automatic pipeline runs
+- Automated deployment of your AKS Application
