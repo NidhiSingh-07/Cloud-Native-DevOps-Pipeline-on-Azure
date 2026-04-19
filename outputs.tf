@@ -1,3 +1,3 @@
-output "id" {
-  value = azurerm_log_analytics_workspace.Log_Analytics_WorkSpace.id
+output "kubelet_object_id" {
+  value = azurerm_kubernetes_cluster.k8s.kubelet_identity[0].object_id
 }
